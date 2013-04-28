@@ -13,9 +13,20 @@ MakeSandwich::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  # Do care if the mailer can't send
+   config.action_mailer.raise_delivery_errors = true
 
+  config.action_mailer.delivery_method = :smtp
+  # these setting will only work if the Bash environment vars have been set
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "www.gmail.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_NAME"],
+    password: ENV["GMAIL_PASSWORD"]
+  }
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
