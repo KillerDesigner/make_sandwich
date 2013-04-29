@@ -14,8 +14,9 @@
   <div class="field">
     <%= f.label :sandwich_type %><br />
     <%= f.collection_select(:order_type, SandwichOrder.all, :sandwich_type, :sandwich_type, :prompt => true) %>
+
   </div>
-  <div class="actions">
+  <div class="actions"> 
     <%= f.submit %>
   </div>
 <% end %>
