@@ -1,0 +1,21 @@
+<%= form_for(@sandwich_order) do |f| %>
+  <% if @sandwich_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sandwich_orders.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @sandwich_orders.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sandwich_type %><br />
+    <%= f.collection_select(:order_type, SandwichOrder.all, :sandwich_type, :sandwich_type, :prompt => true) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

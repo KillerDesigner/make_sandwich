@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Order:</b>
+  <%= @sandwich_orders.sandwich_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_sandwich_order_path(@sandwich_order) %> |
+<%= link_to 'Back', sandwich_order_path %>
