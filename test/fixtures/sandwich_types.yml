@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type_meaty: MyString
+  type_vegetarian: MyString
+  type_vegan: MyString
+  type_raw: MyString
+
+two:
+  type_meaty: MyString
+  type_vegetarian: MyString
+  type_vegan: MyString
+  type_raw: MyString
