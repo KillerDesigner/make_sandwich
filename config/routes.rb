@@ -2,7 +2,7 @@ MakeSandwich::Application.routes.draw do
   
   resources :sandwich_orders
   resources :users
-  root to: "users#new"
+  root to: "sandwich_orders#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

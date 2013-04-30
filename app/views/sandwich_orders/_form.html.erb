@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :sandwich_type %><br />
-    <%= f.collection_select(:order_type, SandwichOrder.all, :sandwich_type, :sandwich_type, :prompt => true) %>
+    <%= f.collection_select(:sandwich_type, SandwichOrderType.all, :sandwich_type, :sandwich_type) %>
 
   </div>
   <div class="actions"> 

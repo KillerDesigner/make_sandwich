@@ -12,7 +12,7 @@ class SandwichOrdersController < ApplicationController
 
   # POST /sandwich_order
   def create
-    @sandwich_order = SandwichOrder.new(params[:order_type])
+    @sandwich_order = SandwichOrder.new(params[:sandwich_type])
 
     respond_to do |format|
       if @sandwich_order.save
