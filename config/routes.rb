@@ -1,6 +1,9 @@
 MakeSandwich::Application.routes.draw do
   
-  resources :sandwich_orders
+  resources :sandwich_orders do
+    resources :sandwich_order_types
+  end
+
   resources :users
   root to: "sandwich_orders#new"
 
