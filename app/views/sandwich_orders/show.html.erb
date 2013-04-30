@@ -1,10 +1,21 @@
-<p id="notice"><%= notice %></p>
-
+<div class="navbar navbar-fixed-top">  
+  <div class="navbar-inner">  
+    <div class="container">  
+    <div id="notice"><%= notice %></div>
+    </div>  
+  </div>  
+</div>  
+<div class="container">
 <p>
-  <b>Order:</b>
+  <b>Your Order Summary:</b>
   <%= @sandwich_order.sandwich_type %>
 </p>
+</div>
 
 
 <%= link_to 'Edit', edit_sandwich_order_path(@sandwich_order) %> |
 <%= link_to 'Back', sandwich_order_path %>
+
+
+
+
