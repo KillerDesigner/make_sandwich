@@ -1,5 +1,5 @@
 class SandwichOrder < ActiveRecord::Base
-  attr_accessible :sandwich_type
+  attr_accessible :sandwich_order_type_id
   belongs_to :user
-  has_many :sandwich_order_type
+  belongs_to :sandwich_order_type
 end

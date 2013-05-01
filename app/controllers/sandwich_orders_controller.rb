@@ -10,13 +10,25 @@ class SandwichOrdersController < ApplicationController
     end
   end
 
+
+  def show
+    @sandwich_order = SandwichOrder.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @sandwich_order }
+    end
+  end
+
   # POST /sandwich_order
   def create
-    @sandwich_order = SandwichOrder.new(params[:sandwich_type])
+    @sandwich_order = SandwichOrder.new(params[:sandwich_order])
+    puts '******************************'
+    puts params[:sandwich_type]
 
     respond_to do |format|
       if @sandwich_order.save
-        SandwichmakerMailer.confirm_order(@sandwich_orders).deliver
+        SandwichmakerMailer.confirm_order(@sandwich_order).deliver
         format.html { redirect_to @sandwich_order, notice: 'Sandwich order was successfully created.' }
         format.json { render json: @sandwich_order, status: :created, location: @sandwich_order }
       else
