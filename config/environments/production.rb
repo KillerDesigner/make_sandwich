@@ -49,20 +49,20 @@ MakeSandwich::Application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.delivery_method = :smtp
   # these setting will only work if the Bash environment vars have been set
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "www.gmail.com",
+    domain: "gmail.com",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "bestsandwichmaker@gmail.com",
     password: "88sandwich"
   }
-  config.action_mailer.default_url_options = {host: "sandwich-master/heroku.com"}
+  config.action_mailer.default_url_options = {host: "sandwich-master.herokuapp.com"}
   
   # Enable threaded mode
   # config.threadsafe!
