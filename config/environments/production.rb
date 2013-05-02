@@ -62,7 +62,7 @@ MakeSandwich::Application.configure do
     user_name: "bestsandwichmaker",
     password: "88sandwich"
   }
-  #config.action_mailer.default_url_options = {host: "sandwich-master.herokuapp.com"}
+  config.action_mailer.default_url_options = {host: "sandwich-master.herokuapp.com"}
   
   # Enable threaded mode
   # config.threadsafe!
