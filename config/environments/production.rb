@@ -53,16 +53,6 @@ MakeSandwich::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   # these setting will only work if the Bash environment vars have been set
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "gmail.com",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: "bestsandwichmaker",
-    password: "88sandwich"
-  }
-  config.action_mailer.default_url_options = {host: "sandwich-master.herokuapp.com"}
   
   # Enable threaded mode
   # config.threadsafe!
