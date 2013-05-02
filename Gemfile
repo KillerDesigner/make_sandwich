@@ -12,6 +12,13 @@ group :development do
   gem 'sqlite3'
 end
 
+group :test, :development do
+  gem 'turn'
+  gem 'rspec-rails'
+  #gem 'capybara'
+  #gem 'guard-rspec'
+end
+
 group :production do
   gem 'pg'
 end

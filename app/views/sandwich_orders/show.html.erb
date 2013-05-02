@@ -1,17 +1,25 @@
 <div class="navbar navbar-fixed-top">  
   <div class="navbar-inner">  
     <div class="container">  
-    <div id="notice"><%= notice %></div>
+    <h1>Order Summary</h1>
     </div>  
   </div>  
 </div>  
 <div class="container">
-<p>
-  <b>Your Order Summary:</b>
-  <%= @sandwich_order.sandwich_order_type.sandwich_type %>
-</p>
-</div>
+	<% if flash[:notice] %>
+		  <div class="alert alert-error">
+			  <%= alert %>
+		  </div>
+		  <div class="alert alert-block">
+		  	<%= notice %>
+		  </div>
+	<% end %>
 
+	<p>
+	  <b>You ordered the following sandwich:</b>
+	  <%= @sandwich_order.sandwich_order_type.sandwich_type %>
+	</p>
+</div>
 
 <%= link_to 'Edit', edit_sandwich_order_path(@sandwich_order) %> |
 <%= link_to 'Back', sandwich_order_path %>

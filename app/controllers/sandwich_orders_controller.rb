@@ -1,6 +1,5 @@
 class SandwichOrdersController < ApplicationController
 
-  # GET /sandwich_order/new
   def new
     @sandwich_order = SandwichOrder.new
 
@@ -20,7 +19,10 @@ class SandwichOrdersController < ApplicationController
     end
   end
 
-  # POST /sandwich_order
+  def edit
+    @sandwich_order = SandwichOrder.find(params[:id])
+  end
+
   def create
     @sandwich_order = SandwichOrder.new(params[:sandwich_order])
     puts '******************************'
