@@ -59,10 +59,10 @@ MakeSandwich::Application.configure do
     domain: "gmail.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "bestsandwichmaker@gmail.com",
+    user_name: "bestsandwichmaker",
     password: "88sandwich"
   }
-  config.action_mailer.default_url_options = {host: "sandwich-master.herokuapp.com"}
+  #config.action_mailer.default_url_options = {host: "sandwich-master.herokuapp.com"}
   
   # Enable threaded mode
   # config.threadsafe!
