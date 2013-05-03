@@ -24,8 +24,8 @@ MakeSandwich::Application.configure do
     domain: "www.gmail.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["GMAIL_NAME"],
-    password: ENV["GMAIL_PASSWORD"]
+    user_name: "bestsandwichmaker@gmail.com",
+    password: "88sandwich"
   }
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
