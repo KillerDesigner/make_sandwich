@@ -26,7 +26,7 @@ class SandwichOrdersController < ApplicationController
   def create
     @sandwich_order = SandwichOrder.new(params[:sandwich_order])
     puts '******************************'
-    puts params[:sandwich_type]
+    puts params[:sandwich_order]
 
     respond_to do |format|
       if @sandwich_order.save
