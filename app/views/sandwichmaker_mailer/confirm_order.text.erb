@@ -1,13 +1,12 @@
 Greetings! Your <%= @sandwich_order.sandwich_order_type.sandwich_type %> sandwich will be ready soon.
 
-<% food_quotes = File.new("#{Rails.root}/app/assets/quotes.txt").to_a  
+<% food_quotes = File.new("#{Rails.root}/app/assets/quotes.txt").to_a
    quote_num = 1
 
-   puts food_quotes.length
-
-	(1..food_quotes.length).each do |i|
-		quote_num = Random.rand(i)
-	end %>
+   (1..food_quotes.length).each do |i|
+	  quote_num = Random.rand(i)
+		
+   end %>
 
 	
 <%= food_quotes[quote_num] %>
