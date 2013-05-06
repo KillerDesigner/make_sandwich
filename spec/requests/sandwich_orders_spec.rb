@@ -10,7 +10,7 @@ describe "SandwichOrders" do
 
     it "creates a new sandwich order" do
     	current_path.should == new_sandwich_order_path
-    	page.select "meaty", :from => "Sandwich Type"
+    	page.select( "meaty", :from => :sandwich_type ) # not sure why but this isn't working
     	page.click_button "Create Sandwich Order"
     end
   end
