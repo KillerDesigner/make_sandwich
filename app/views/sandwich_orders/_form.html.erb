@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :sandwich_type %><br />
+    <%= f.label :sandwich_type %>
     <%= f.collection_select(:sandwich_order_type_id, SandwichOrderType.all, :id, :sandwich_type ) %>
   </div>
   <div class="submit"> 

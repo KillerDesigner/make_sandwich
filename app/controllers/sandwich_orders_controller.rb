@@ -1,5 +1,14 @@
 class SandwichOrdersController < ApplicationController
 
+  def index
+    @sandwich_order = SandwichOrder.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @sandwich_order }
+    end
+  end
+
   def new
     @sandwich_order = SandwichOrder.new
 

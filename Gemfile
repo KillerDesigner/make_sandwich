@@ -11,13 +11,15 @@ gem 'bootstrap-sass', '2.1'
 # do the Heroku thing
 group :development do
   gem 'sqlite3'
+  gem 'guard-spork', '1.2.0'
+  gem 'spork', '0.9.2'
 end
 
 group :test, :development do
-  gem 'turn'
+  #gem 'turn'
+  gem 'capybara'
   gem 'rspec-rails'
-  #gem 'capybara'
-  #gem 'guard-rspec'
+  gem 'guard-rspec'
 end
 
 group :production do

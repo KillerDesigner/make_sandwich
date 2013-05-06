@@ -1,5 +1,39 @@
 @import "bootstrap";
 
 body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
+   padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+h2 {
+  font-size: 2.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: normal;
+  color: #333;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
