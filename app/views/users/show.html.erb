@@ -1,5 +1,14 @@
-<p id="notice"><%= notice %></p>
-
+<div class="navbar navbar-fixed-top">  
+  <div class="navbar-inner">  
+    <a class="brand" href="#">Users</a>
+	<ul class="nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><%= link_to 'Sign In', new_user_path %></li>
+      <li><%= link_to 'Back', users_path %></li>
+    </ul>
+  </div>    
+</div> 
+<div class="container">
 <p>
   <b>Name:</b>
   <%= @user.name %>
@@ -9,7 +18,4 @@
   <b>Email:</b>
   <%= @user.email %>
 </p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+</div>

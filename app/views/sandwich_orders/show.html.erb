@@ -1,15 +1,19 @@
 <div class="navbar navbar-fixed-top">  
   <div class="navbar-inner">  
-    <div class="container">  
-    <h1>Order Summary</h1>
-    </div>  
-  </div>  
-</div>  
+    <a class="brand" href="#">Order Summary</a>
+    <ul class="nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><%= link_to 'Edit', edit_sandwich_order_path(@sandwich_order) %></li>
+	  <li><%= link_to 'Back', sandwich_order_path %></li>
+    </ul>
+  </div>    
+</div> 
 <div class="container">
-	<% if flash[:notice] %>
+	<% if flash[:error] %>
 		  <div class="alert alert-error">
 			  <%= alert %>
 		  </div>
+    <% elsif flash[:notice] %>
 		  <div class="alert alert-block">
 		  	<%= notice %>
 		  </div>
@@ -22,8 +26,7 @@
 </div>
 <%= link_to image_tag("cut_sandwich.jpg", alt: "Sandwich"), '#' %>
 
-<%= link_to 'Edit', edit_sandwich_order_path(@sandwich_order) %> |
-<%= link_to 'Back', sandwich_order_path %>
+
 
 
 

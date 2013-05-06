@@ -1,13 +1,14 @@
  <div class="navbar navbar-fixed-top">  
   <div class="navbar-inner">  
-    <div class="container">  
-    <h1>Order Sandwich</h1> 
-    </div>  
-  </div>  
-</div>  
+    <a class="brand" href="#">Sandwich Selector</a>
+    <ul class="nav">
+      <li class="active"><a href="/new/">Home</a></li>
+      <li><%= link_to 'Sign In', users_path %></li>
+    </ul>
+  </div>    
+</div> 
 <div class="container">
   <%= render 'form' %>
 </div>
 <%= link_to image_tag("cut_sandwich.jpg", alt: "Sandwich"), '#' %>
-<%= link_to 'Back', sandwichorder_path %>
 
